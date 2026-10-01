@@ -31,8 +31,9 @@ set_property board_part digilentinc.com:arty-s7-50:part0:1.1 [current_project]
 set_property ip_output_repo d:/github/Vivado/ArtyS7-Audio/PmodI2S.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
+  D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/new/axis_dd8_wrapper.v
   D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/new/axis_i2s2.v
-  D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/new/axis_volume_controller.v
+  D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v
   D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/new/top.v
 }
 read_ip -quiet D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci

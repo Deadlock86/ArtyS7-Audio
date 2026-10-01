@@ -40,7 +40,7 @@ module dd8_core(
 
     localparam integer BUF_LEN = 65536;
 
-    reg signed [23:0] delay_mem [0:BUF_LEN-1];
+    (* ram_style = "block" *) reg signed [23:0] delay_mem [0:BUF_LEN-1];
     reg [15:0] wr_ptr = 16'd0;
 
     integer ii;
@@ -92,8 +92,9 @@ module dd8_core(
     end
 
     wire [15:0] rd_ptr = wr_ptr - delay_samps;
-    wire signed [23:0] delayed_now = delay_mem[rd_ptr];
-
+    //wire signed [23:0] delayed_now = delay_mem[rd_ptr];
+    reg signed [23:0] delayed_now;
+    
     // Simple block-reverse read for reverse mode.
     reg [15:0] rev_count = 16'd0;
     wire [15:0] rev_base = wr_ptr - delay_samps;
@@ -193,6 +194,8 @@ module dd8_core(
     always @(posedge clk) begin
         if (new_sample) begin
             delay_mem[wr_ptr] <= write_samp;
+            delayed_now         <= delay_mem[rd_ptr];
+            
             wr_ptr <= wr_ptr + 16'd1;
             lfo_phase <= lfo_phase + 18'd113;
             if (rev_count >= delay_samps - 16'd1)

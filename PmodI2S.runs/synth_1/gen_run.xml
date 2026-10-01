@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1790077754">
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1790879550">
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
@@ -11,6 +11,13 @@
   <File Type="VDS-TIMING-PB" Name="top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/axis_dd8_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/new/axis_i2s2.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/axis_i2s2.v"/>
@@ -20,10 +27,10 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/new/axis_volume_controller.v">
+    <File Path="$PSRCDIR/sources_1/imports/DD8_DELAY/dd8_core.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/axis_volume_controller.v"/>
-        <Attr Name="ImportTime" Val="1769029301"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Guitar-effects-Verilog-/DD8_DELAY/dd8_core.v"/>
+        <Attr Name="ImportTime" Val="1789930870"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -36,11 +43,11 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/DD8_DELAY/dd8_core.v">
+    <File Path="$PSRCDIR/sources_1/imports/new/axis_volume_controller.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Guitar-effects-Verilog-/DD8_DELAY/dd8_core.v"/>
-        <Attr Name="ImportTime" Val="1789930870"/>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/axis_volume_controller.v"/>
+        <Attr Name="ImportTime" Val="1769029301"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

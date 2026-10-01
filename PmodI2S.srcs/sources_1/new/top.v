@@ -77,6 +77,42 @@ module top #(
         .rx_sdin(rx_data)
     );
     
+    //DD-8 Parameter mapping
+    wire        dd8_enable         = sw[0];
+    wire [2:0]  dd8_mode_sel       = sw[3:1];
+    wire [2:0]  dd8_dtime       = 3'd3;
+    wire [2:0]  dd8_feedback    = 3'd4;
+    wire [2:0]  dd8_elevel      = 3'd4;
+    
+    //DD-8 Axi-stram wrapper instant
+    axis_dd8_wrapper #(
+            .DATA_WIDTH(24)
+        ) m_dd8_effect (
+            .clk           (axis_clk),
+            .resetn        (resetn),
+    
+            // ctrl 
+            .mode_sel      (dd8_mode_sel),
+            .dtime         (dd8_dtime),
+            .feedback      (dd8_feedback),
+            .elevel        (dd8_elevel),
+            .enable        (dd8_enable),
+    
+            // AXI-Stream RX (Input Audio)
+            .s_axis_data   (axis_rx_data),
+            .s_axis_valid  (axis_rx_valid),
+            .s_axis_ready  (axis_rx_ready),
+            .s_axis_last   (axis_rx_last),
+    
+            // AXI-Stream TX (Output Audio)
+            .m_axis_data   (axis_tx_data),
+            .m_axis_valid  (axis_tx_valid),
+            .m_axis_ready  (axis_tx_ready),
+            .m_axis_last   (axis_tx_last)
+        );
+    
+    
+    /*
     axis_volume_controller #(
 		.SWITCH_WIDTH(NUMBER_OF_SWITCHES),
 		.DATA_WIDTH(24)
@@ -94,4 +130,5 @@ module top #(
         .m_axis_ready(axis_tx_ready),
         .m_axis_last(axis_tx_last)
     );
+    */
 endmodule
