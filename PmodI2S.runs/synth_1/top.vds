@@ -2,8 +2,8 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Thu Oct  1 20:32:33 2026
-# Process ID: 10820
+# Start of session at: Fri Oct  2 21:07:27 2026
+# Process ID: 20124
 # Current directory: D:/github/Vivado/ArtyS7-Audio/PmodI2S.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: D:/github/Vivado/ArtyS7-Audio/PmodI2S.runs/synth_1/top.vds
@@ -15,14 +15,15 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 16052 
+INFO: Helper process launched with PID 9744 
+WARNING: [Synth 8-1102] /* in comment [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:252]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 365.242 ; gain = 93.262
+Starting RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 374.328 ; gain = 102.312
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/new/top.v:20]
 	Parameter NUMBER_OF_SWITCHES bound to: 4 - type: integer 
 	Parameter RESET_POLARITY bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/github/Vivado/ArtyS7-Audio/PmodI2S.runs/synth_1/.Xil/Vivado-10820-DESKTOP-08KQHMF/realtime/clk_wiz_0_stub.vhdl:13]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/github/Vivado/ArtyS7-Audio/PmodI2S.runs/synth_1/.Xil/Vivado-20124-DESKTOP-08KQHMF/realtime/clk_wiz_0_stub.vhdl:13]
 INFO: [Synth 8-638] synthesizing module 'axis_i2s2' [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/new/axis_i2s2.v:24]
 	Parameter EOF_COUNT bound to: 9'b111000111 
 INFO: [Synth 8-256] done synthesizing module 'axis_i2s2' (1#1) [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/new/axis_i2s2.v:24]
@@ -30,10 +31,12 @@ WARNING: [Synth 8-689] width (24) of port connection 'tx_axis_s_data' does not m
 WARNING: [Synth 8-689] width (24) of port connection 'rx_axis_m_data' does not match port width (32) of module 'axis_i2s2' [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/new/top.v:65]
 INFO: [Synth 8-638] synthesizing module 'axis_dd8_wrapper' [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/new/axis_dd8_wrapper.v:23]
 	Parameter DATA_WIDTH bound to: 24 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'dd8_core' [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:29]
+INFO: [Synth 8-638] synthesizing module 'dd8_core' [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:3]
 	Parameter BUF_LEN bound to: 65536 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:43]
-INFO: [Synth 8-256] done synthesizing module 'dd8_core' (2#1) [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:29]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:18]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp = "yes" *) [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:170]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp = "yes" *) [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:186]
+INFO: [Synth 8-256] done synthesizing module 'dd8_core' (2#1) [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:3]
 WARNING: [Synth 8-350] instance 'u_dd8_core' of module 'dd8_core' requires 9 connections, but only 8 given [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/new/axis_dd8_wrapper.v:58]
 INFO: [Synth 8-256] done synthesizing module 'axis_dd8_wrapper' (3#1) [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/new/axis_dd8_wrapper.v:23]
 INFO: [Synth 8-256] done synthesizing module 'top' (4#1) [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/new/top.v:20]
@@ -42,7 +45,7 @@ WARNING: [Synth 8-3331] design axis_dd8_wrapper has unconnected port dtime[2]
 WARNING: [Synth 8-3331] design axis_dd8_wrapper has unconnected port dtime[1]
 WARNING: [Synth 8-3331] design axis_dd8_wrapper has unconnected port dtime[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 507.145 ; gain = 235.164
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 441.262 ; gain = 169.246
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -55,15 +58,15 @@ WARNING: [Synth 8-3295] tying undriven pin u_dd8_core:dtime[2] to constant 0 [D:
 WARNING: [Synth 8-3295] tying undriven pin u_dd8_core:dtime[1] to constant 0 [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/new/axis_dd8_wrapper.v:58]
 WARNING: [Synth 8-3295] tying undriven pin u_dd8_core:dtime[0] to constant 0 [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/new/axis_dd8_wrapper.v:58]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 507.145 ; gain = 235.164
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 441.262 ; gain = 169.246
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7s50csga324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/github/Vivado/ArtyS7-Audio/PmodI2S.runs/synth_1/.Xil/Vivado-10820-DESKTOP-08KQHMF/dcp3/clk_wiz_0_in_context.xdc] for cell 'm_clk'
-Finished Parsing XDC File [D:/github/Vivado/ArtyS7-Audio/PmodI2S.runs/synth_1/.Xil/Vivado-10820-DESKTOP-08KQHMF/dcp3/clk_wiz_0_in_context.xdc] for cell 'm_clk'
+Parsing XDC File [D:/github/Vivado/ArtyS7-Audio/PmodI2S.runs/synth_1/.Xil/Vivado-20124-DESKTOP-08KQHMF/dcp3/clk_wiz_0_in_context.xdc] for cell 'm_clk'
+Finished Parsing XDC File [D:/github/Vivado/ArtyS7-Audio/PmodI2S.runs/synth_1/.Xil/Vivado-20124-DESKTOP-08KQHMF/dcp3/clk_wiz_0_in_context.xdc] for cell 'm_clk'
 Parsing XDC File [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/constrs_1/imports/constraints/Arty-S7-50-Rev-E-Master.xdc]
 Finished Parsing XDC File [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/constrs_1/imports/constraints/Arty-S7-50-Rev-E-Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/constrs_1/imports/constraints/Arty-S7-50-Rev-E-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
@@ -73,33 +76,34 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 727.301 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 713.891 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 727.301 ; gain = 455.320
+Finished Constraint Validation : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 713.891 ; gain = 441.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 727.301 ; gain = 455.320
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 713.891 ; gain = 441.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  D:/github/Vivado/ArtyS7-Audio/PmodI2S.runs/synth_1/.Xil/Vivado-10820-DESKTOP-08KQHMF/dcp3/clk_wiz_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  D:/github/Vivado/ArtyS7-Audio/PmodI2S.runs/synth_1/.Xil/Vivado-10820-DESKTOP-08KQHMF/dcp3/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  D:/github/Vivado/ArtyS7-Audio/PmodI2S.runs/synth_1/.Xil/Vivado-20124-DESKTOP-08KQHMF/dcp3/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  D:/github/Vivado/ArtyS7-Audio/PmodI2S.runs/synth_1/.Xil/Vivado-20124-DESKTOP-08KQHMF/dcp3/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for m_clk. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 727.301 ; gain = 455.320
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 713.891 ; gain = 441.875
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/new/axis_i2s2.v:51]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:127]
-WARNING: [Synth 8-6014] Unused sequential element wr_ptr_reg was removed.  [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:94]
-WARNING: [Synth 8-6014] Unused sequential element lfo_phase_reg was removed.  [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:115]
-WARNING: [Synth 8-6014] Unused sequential element rev_count_reg was removed.  [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:101]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:87]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:128]
+WARNING: [Synth 8-6014] Unused sequential element wr_ptr_reg was removed.  [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:69]
+WARNING: [Synth 8-6014] Unused sequential element lfo_phase_reg was removed.  [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:78]
+WARNING: [Synth 8-6014] Unused sequential element rev_count_reg was removed.  [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:74]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 727.301 ; gain = 455.320
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 713.891 ; gain = 441.875
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -113,10 +117,10 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     29 Bit       Adders := 2     
-	   3 Input     26 Bit       Adders := 1     
-	   2 Input     24 Bit       Adders := 5     
-	   2 Input     16 Bit       Adders := 8     
+	   2 Input     24 Bit       Adders := 4     
 	   3 Input     16 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   4 Input     16 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 4     
@@ -131,8 +135,9 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 1     
 	   4 Input     24 Bit        Muxes := 2     
 	   2 Input     24 Bit        Muxes := 8     
-	   8 Input     24 Bit        Muxes := 4     
+	   8 Input     24 Bit        Muxes := 3     
 	   2 Input     17 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 4     
 	   8 Input     15 Bit        Muxes := 1     
 	   8 Input      4 Bit        Muxes := 1     
 	   8 Input      3 Bit        Muxes := 1     
@@ -166,18 +171,19 @@ Module dd8_core
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     29 Bit       Adders := 2     
-	   3 Input     26 Bit       Adders := 1     
-	   2 Input     24 Bit       Adders := 5     
-	   2 Input     16 Bit       Adders := 8     
+	   2 Input     24 Bit       Adders := 4     
 	   3 Input     16 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   4 Input     16 Bit       Adders := 1     
 +---Registers : 
 	               24 Bit    Registers := 1     
 +---RAMs : 
 	            1536K Bit         RAMs := 1     
 +---Muxes : 
-	   8 Input     24 Bit        Muxes := 4     
+	   8 Input     24 Bit        Muxes := 3     
 	   2 Input     24 Bit        Muxes := 6     
 	   2 Input     17 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 4     
 	   8 Input     15 Bit        Muxes := 1     
 	   8 Input      4 Bit        Muxes := 1     
 	   8 Input      3 Bit        Muxes := 1     
@@ -197,25 +203,14 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element m_i2s2/count_reg was removed.  [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/new/axis_i2s2.v:51]
-WARNING: [Synth 8-6014] Unused sequential element m_dd8_effect/u_dd8_core/wr_ptr_reg was removed.  [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:94]
-WARNING: [Synth 8-6014] Unused sequential element m_dd8_effect/u_dd8_core/lfo_phase_reg was removed.  [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:115]
-WARNING: [Synth 8-6014] Unused sequential element m_dd8_effect/u_dd8_core/rev_count_reg was removed.  [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:101]
+WARNING: [Synth 8-6014] Unused sequential element m_dd8_effect/u_dd8_core/wr_ptr_reg was removed.  [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:69]
+WARNING: [Synth 8-6014] Unused sequential element m_dd8_effect/u_dd8_core/lfo_phase_reg was removed.  [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:78]
+WARNING: [Synth 8-6014] Unused sequential element m_dd8_effect/u_dd8_core/rev_count_reg was removed.  [D:/github/Vivado/ArtyS7-Audio/PmodI2S.srcs/sources_1/imports/DD8_DELAY/dd8_core.v:74]
 DSP Report: Generating DSP m_dd8_effect/u_dd8_core/wet_mult, operation Mode is: A*B.
 DSP Report: operator m_dd8_effect/u_dd8_core/wet_mult is absorbed into DSP m_dd8_effect/u_dd8_core/wet_mult.
-WARNING: [Synth 8-3463] Infeasible ramstyle = block set for RAM m_dd8_effect/u_dd8_core/delay_mem_reg,trying to implement using LUTRAM
-WARNING: [Synth 8-3463] Infeasible ramstyle = block set for RAM m_dd8_effect/u_dd8_core/delay_mem_reg,trying to implement using LUTRAM
-WARNING: [Synth 8-3463] Infeasible ramstyle = block set for RAM m_dd8_effect/u_dd8_core/delay_mem_reg,trying to implement using LUTRAM
-WARNING: [Synth 8-3463] Infeasible ramstyle = block set for RAM m_dd8_effect/u_dd8_core/delay_mem_reg,trying to implement using LUTRAM
-WARNING: [Synth 8-3463] Infeasible ramstyle = block set for RAM m_dd8_effect/u_dd8_core/delay_mem_reg,trying to implement using LUTRAM
-WARNING: [Synth 8-3463] Infeasible ramstyle = block set for RAM m_dd8_effect/u_dd8_core/delay_mem_reg,trying to implement using LUTRAM
-WARNING: [Synth 8-3463] Infeasible ramstyle = block set for RAM m_dd8_effect/u_dd8_core/delay_mem_reg,trying to implement using LUTRAM
-WARNING: [Synth 8-3463] Infeasible ramstyle = block set for RAM m_dd8_effect/u_dd8_core/delay_mem_reg,trying to implement using LUTRAM
-WARNING: [Synth 8-3463] Infeasible ramstyle = block set for RAM m_dd8_effect/u_dd8_core/delay_mem_reg,trying to implement using LUTRAM
-WARNING: [Synth 8-3463] Infeasible ramstyle = block set for RAM m_dd8_effect/u_dd8_core/delay_mem_reg,trying to implement using LUTRAM
-WARNING: [Synth 8-3463] Infeasible ramstyle = block set for RAM m_dd8_effect/u_dd8_core/delay_mem_reg,trying to implement using LUTRAM
-WARNING: [Synth 8-3463] Infeasible ramstyle = block set for RAM m_dd8_effect/u_dd8_core/delay_mem_reg,trying to implement using LUTRAM
-WARNING: [Synth 8-3463] Infeasible ramstyle = block set for RAM m_dd8_effect/u_dd8_core/delay_mem_reg,trying to implement using LUTRAM
-WARNING: [Synth 8-3463] Infeasible ramstyle = block set for RAM m_dd8_effect/u_dd8_core/delay_mem_reg,trying to implement using LUTRAM
+DSP Report: Generating DSP m_dd8_effect/u_dd8_core/fb_mult, operation Mode is: A*B.
+DSP Report: operator m_dd8_effect/u_dd8_core/fb_mult is absorbed into DSP m_dd8_effect/u_dd8_core/fb_mult.
+INFO: [Synth 8-4652] Swapped enable and write-enable on 24 RAM instances of RAM m_dd8_effect/u_dd8_core/delay_mem_reg to conserve power
 WARNING: [Synth 8-3332] Sequential element (m_i2s2/rx_data_l_reg[31]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (m_i2s2/rx_data_l_reg[30]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (m_i2s2/rx_data_l_reg[29]) is unused and will be removed from module top.
@@ -233,26 +228,27 @@ WARNING: [Synth 8-3332] Sequential element (m_i2s2/rx_data_r_reg[26]) is unused 
 WARNING: [Synth 8-3332] Sequential element (m_i2s2/rx_data_r_reg[25]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (m_i2s2/rx_data_r_reg[24]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:06:59 ; elapsed = 00:07:09 . Memory (MB): peak = 2243.992 ; gain = 1972.012
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 713.891 ; gain = 441.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
-Distributed RAM: Preliminary Mapping  Report (see note below)
-+------------+---------------------------------------+-----------+----------------------+------------------+
-|Module Name | RTL Object                            | Inference | Size (Depth x Width) | Primitives       | 
-+------------+---------------------------------------+-----------+----------------------+------------------+
-|top         | m_dd8_effect/u_dd8_core/delay_mem_reg | Implied   | 64 K x 24            | RAM64M x 49152   | 
-+------------+---------------------------------------+-----------+----------------------+------------------+
+Block RAM: Preliminary Mapping  Report (see note below)
++------------+---------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object    | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+---------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|dd8_core:   | delay_mem_reg | 64 K x 24(READ_FIRST)  | W |   | 64 K x 24(WRITE_FIRST) |   | R | Port A and B     | 0      | 48     | 
++------------+---------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
-Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 
 DSP: Preliminary Mapping  Report (see note below)
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |dd8_core    | A*B         | 24     | 5      | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dd8_core    | A*B         | 24     | 4      | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
@@ -271,24 +267,24 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'm_clk/axis_clk' to pin 'm_clk/bbstub_axis_clk/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:07:23 ; elapsed = 00:07:34 . Memory (MB): peak = 2243.992 ; gain = 1972.012
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:16 ; elapsed = 00:01:23 . Memory (MB): peak = 725.367 ; gain = 453.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:08:58 ; elapsed = 00:09:13 . Memory (MB): peak = 2271.645 ; gain = 1999.664
+Finished Timing Optimization : Time (s): cpu = 00:01:22 ; elapsed = 00:01:30 . Memory (MB): peak = 763.566 ; gain = 491.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
-Distributed RAM: Final Mapping  Report
-+------------+---------------------------------------+-----------+----------------------+------------------+
-|Module Name | RTL Object                            | Inference | Size (Depth x Width) | Primitives       | 
-+------------+---------------------------------------+-----------+----------------------+------------------+
-|top         | m_dd8_effect/u_dd8_core/delay_mem_reg | Implied   | 64 K x 24            | RAM64M x 49152   | 
-+------------+---------------------------------------+-----------+----------------------+------------------+
+Block RAM: Final Mapping  Report
++------------+---------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                            | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+---------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|top         | m_dd8_effect/u_dd8_core/delay_mem_reg | 64 K x 24(READ_FIRST)  | W |   | 64 K x 24(WRITE_FIRST) |   | R | Port A and B     | 0      | 48     | 
++------------+---------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -302,3 +298,188 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_4 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_5 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_6 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_7 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_8 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_9 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_10 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_11 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_12 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_13 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_14 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_15 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_16 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_17 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_18 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_19 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_20 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_21 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_22 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance m_dd8_effect/u_dd8_core/delay_mem_reg_1_23 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:22 ; elapsed = 00:01:31 . Memory (MB): peak = 767.133 ; gain = 495.117
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/active_rd_ptr [0] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/active_rd_ptr [1] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/active_rd_ptr [2] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/active_rd_ptr [3] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/active_rd_ptr [4] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/active_rd_ptr [5] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/active_rd_ptr [6] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/active_rd_ptr [7] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/active_rd_ptr [8] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/active_rd_ptr [9] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/active_rd_ptr [10] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/active_rd_ptr [11] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/active_rd_ptr [12] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/active_rd_ptr [13] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/active_rd_ptr [14] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/active_rd_ptr [15] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/wr_ptr_reg [0] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/wr_ptr_reg [1] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/wr_ptr_reg [2] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/wr_ptr_reg [3] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/wr_ptr_reg [4] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/wr_ptr_reg [5] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/wr_ptr_reg [6] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/wr_ptr_reg [7] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/wr_ptr_reg [8] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/wr_ptr_reg [9] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/wr_ptr_reg [10] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \m_dd8_effect/u_dd8_core/wr_ptr_reg [11] is driving 48 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_26 is driving 240 big block pins (URAM, BRAM and DSP loads). Created 24 replicas of its driver. 
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:24 ; elapsed = 00:01:33 . Memory (MB): peak = 767.133 ; gain = 495.117
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:24 ; elapsed = 00:01:33 . Memory (MB): peak = 767.133 ; gain = 495.117
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:25 ; elapsed = 00:01:33 . Memory (MB): peak = 767.133 ; gain = 495.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:25 ; elapsed = 00:01:33 . Memory (MB): peak = 767.133 ; gain = 495.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:25 ; elapsed = 00:01:33 . Memory (MB): peak = 767.133 ; gain = 495.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:25 ; elapsed = 00:01:33 . Memory (MB): peak = 767.133 ; gain = 495.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-----------------+------+
+|      |Cell             |Count |
++------+-----------------+------+
+|1     |clk_wiz_0_bbox_0 |     1|
+|2     |CARRY4           |    65|
+|3     |DSP48E1          |     2|
+|4     |LUT1             |    55|
+|5     |LUT2             |   102|
+|6     |LUT3             |   155|
+|7     |LUT4             |    57|
+|8     |LUT5             |   168|
+|9     |LUT6             |    92|
+|10    |RAMB36E1         |    24|
+|11    |RAMB36E1_1       |    24|
+|12    |FDRE             |   332|
+|13    |IBUF             |     6|
+|14    |OBUF             |     7|
++------+-----------------+------+
+
+Report Instance Areas: 
++------+---------------+-----------------+------+
+|      |Instance       |Module           |Cells |
++------+---------------+-----------------+------+
+|1     |top            |                 |  1090|
+|2     |  m_dd8_effect |axis_dd8_wrapper |   648|
+|3     |    u_dd8_core |dd8_core         |   648|
+|4     |  m_i2s2       |axis_i2s2        |   428|
++------+---------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:25 ; elapsed = 00:01:33 . Memory (MB): peak = 767.133 ; gain = 495.117
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 24 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:54 ; elapsed = 00:01:22 . Memory (MB): peak = 767.133 ; gain = 222.488
+Synthesis Optimization Complete : Time (s): cpu = 00:01:25 ; elapsed = 00:01:33 . Memory (MB): peak = 767.133 ; gain = 495.117
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 121 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+82 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:27 ; elapsed = 00:01:37 . Memory (MB): peak = 767.133 ; gain = 500.578
+INFO: [Common 17-1381] The checkpoint 'D:/github/Vivado/ArtyS7-Audio/PmodI2S.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 767.133 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Oct  2 21:09:18 2026...

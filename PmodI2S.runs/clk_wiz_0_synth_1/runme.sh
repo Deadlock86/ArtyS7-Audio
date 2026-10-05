@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/github/Vivado/PmodI2S/PmodI2S.runs/clk_wiz_0_synth_1'
+HD_PWD='D:/github/Vivado/ArtyS7-Audio/PmodI2S.runs/clk_wiz_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

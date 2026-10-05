@@ -2,11 +2,11 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Sun Sep 20 15:02:43 2026
-# Process ID: 7740
-# Current directory: D:/github/Vivado/PmodI2S/PmodI2S.runs/clk_wiz_0_synth_1
+# Start of session at: Fri Oct  2 21:05:38 2026
+# Process ID: 12712
+# Current directory: D:/github/Vivado/ArtyS7-Audio/PmodI2S.runs/clk_wiz_0_synth_1
 # Command line: vivado.exe -log clk_wiz_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_0.tcl
-# Log file: D:/github/Vivado/PmodI2S/PmodI2S.runs/clk_wiz_0_synth_1/clk_wiz_0.vds
-# Journal file: D:/github/Vivado/PmodI2S/PmodI2S.runs/clk_wiz_0_synth_1\vivado.jou
+# Log file: D:/github/Vivado/ArtyS7-Audio/PmodI2S.runs/clk_wiz_0_synth_1/clk_wiz_0.vds
+# Journal file: D:/github/Vivado/ArtyS7-Audio/PmodI2S.runs/clk_wiz_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source clk_wiz_0.tcl -notrace
